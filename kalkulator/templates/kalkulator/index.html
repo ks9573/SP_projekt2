@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href="{% static 'kalkulator/style.css' %}" rel="stylesheet"/>	
+		<meta charset="utf-8" />
+		<title>Kalkulator življenskih stroškov</title>
+	</head>
+	
+	<body>
+	
+		<div id="page">
+	
+			<div id="banner"></div>
+			
+			<div id="meniVrstica"> 
+				<div class="meniGumb" id="activeButton"><a href="Stanje.html">Stanje</a></div>
+				<div class="meniGumb"><a href="VpisiPrihodek.html">Vpiši prihodek</a></div>
+				<div class="meniGumb"><a href="VpisiOdhodek.html">Vpiši odhodek</a></div>
+				<div class="meniGumb"><a href="Porocila.html">Poročila</a></div>			
+			</div>
+			
+			<div id="main">
+			
+				<div id="Stanje"> 
+				
+					<form> 											
+							<label>Izberi racun:</label><select>		
+														<option selected>Vsi</option>
+														<option>Osnovni transakcijski racun</option>										
+														</select>	
+							<input type="submit" id="vpisi" value="Prikazi">	
+					</form>
+					
+					<span id="tekst">Stanje: 50€</span>
+					
+					<div id="izpisStanja"> 
+						<br>
+						19.3.2016	Živila -6€	Osnovni transakcijski račun "jajca, mleko, zobotrebci"<br>
+						12.3.2016	Placa +420€	Osnovni transakcijski račun "Plača"<br>
+						10.3.2016	Živila -2€	Osnovni transakcijski račun "toaletni papir"<br>
+						9.3.2016	Živila -5€	Osnovni transakcijski račun "mesa"<br>					
+					</div>			
+				
+				</div>
+						
+			</div>						
+			
+		</div>		
+	
+	</body>
+</html>
