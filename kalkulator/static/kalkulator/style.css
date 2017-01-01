@@ -13,16 +13,16 @@ div {
 	height:98vh; 
 }
 
-#banner { 		
+#banner { 	
+	position: relative;
 	border: 1px solid white;
 	box-sizing: border-box;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 100px;
-	text-align: center;		
-	color: white;
-	font-size: 60px;
+	text-align: right;			
+	color: white;	
 	overflow: hidden;	
 	background-color: #404040;		
 }
@@ -31,6 +31,12 @@ div {
 	height: 83.4%;	
 	border: 1px solid black;
 	box-sizing: border-box;	
+}
+
+#logout {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 #tekst {	

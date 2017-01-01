@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [	
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -112,10 +112,15 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+# S tem kreten kaže 1 uro nazaj
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+""" i added """
+LOGIN_REDIRECT_URL = 'stanje.html'

@@ -1,0 +1,29 @@
+{% extends "kalkulator/base.html" %}
+
+{% block logout %}
+	 
+{% endblock %}
+
+{% block buttons %}
+	 
+{% endblock %}
+
+{% block main %}
+
+	<div id="Vpis"> 
+				
+		<form action="RegistracijaPodrobno.html"> 	{% csrf_token %}												
+				
+			<label>Uporabniško ime:</label><input type="text" required name="ime">		
+			<label>Geslo:</label><input type="password" required name="geslo">
+			<label>Ponovno vnesite geslo:</label><input type="password" required>	
+			<label>Elektronski naslov:</label><input type="email" required name="email">
+			<input type="submit" id="gumbVpisRegistracija" value="Registriraj">
+									
+		</form>
+		
+		<a id="VpisRegisterLink" href="login.html"> Ste že registrirani ? Vpišete se lahko tukaj.</a>
+							
+	</div>
+ 
+{% endblock %}
