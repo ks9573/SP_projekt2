@@ -124,3 +124,33 @@ STATIC_URL = '/static/'
 
 """ i added """
 LOGIN_REDIRECT_URL = 'stanje.html'
+
+
+
+
+
+# logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file1': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/debug.log',
+        },        
+                
+        
+    },                
+   
+    'loggers': {
+        'django': {
+            'handlers': ['file1'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        
+       
+    },
+}
+

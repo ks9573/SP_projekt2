@@ -12,18 +12,17 @@
 			<input type="submit" id="vpisi" value="Prikazi">	
 		</form>
 		-->	
-		
+				
 		<form action="StanjePodrobno">	{% csrf_token %} 											
-			<label>Izberi racun:</label><select name="dropdown">	
+			<label>Prikazi vnose na racunu:</label><select name="dropdown">	
 										{% for racun in racuni %}		
 											{% if user.username == racun.uporabnik.username %}
 												<option>{{racun.ime}}</option>	
 											{% endif %}
 										{% endfor%}																						
 										</select>			
-			<input type="submit" id="vpisi" value="Select">	
-		</form>
-		
+			<input type="submit" id="vpisi" value="Prikazi">	
+		</form>		
 		
 		<span id="tekst"></span>
 		
@@ -31,8 +30,31 @@
 				
 			{% block izpisStanja %}
 			{% endblock %}
+							
+			{{warning}}								
 					
-		</div>			
+		</div>		
+		
+		<form action="dodajRacun">  {% csrf_token %} 	
+			<label>Dodaj nov racun:</label><input type="text" placeholder="Vpisite ime novega racuna" name="racun1">
+										   <input type="submit" id="vpisi" value="Dodaj">		
+		</form>
+		
+		<form action="odstraniRacun">	{% csrf_token %} 											
+			<label>Izbrisi obstojec racun:</label><select name="racun">	
+										{% for racun in racuni %}		
+											{% if user.username == racun.uporabnik.username %}
+												<option>{{racun.ime}}</option>	
+											{% endif %}
+										{% endfor%}																						
+										</select>			
+			<input type="submit" id="vpisi" value="izbrisi">	
+		</form>	
+		
+		
+
+		
+		
 					
 	</div>
 {% endblock %}

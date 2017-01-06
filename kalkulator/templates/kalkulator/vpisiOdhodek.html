@@ -18,7 +18,7 @@
 													{% endif %}
 													{% endfor%}															
 					</select>
-					<label>Znesek:</label><input type="text" pattern=".*[0-9]" placeholder="Vpisite znesek" required name="znesek">													
+					<label>Znesek:</label><input type="text"  placeholder="Vpisite znesek" name="znesek">													
 					<label>Podrobnosti:</label><textarea rows="2" placeholder="Vpisite podrobnosti odhodka" name="podrobnosti"></textarea>		
 					<input type="submit" id="vpisi" value="Vpisi">	
 			</form>
@@ -30,6 +30,8 @@
 				{% block vpisOdhodka %}
 				
 				{% endblock %}
+				
+				{{warning}}
 						
 			</div>		
 		

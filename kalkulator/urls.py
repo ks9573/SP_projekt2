@@ -33,5 +33,15 @@ urlpatterns = [
 	url(r'^porocila', views.porocila, name='porocila'),	
 	url(r'^PorocilaPodrobno', views.PorocilaPodrobno, name='porocilaPodrobno'), 
 	
+	# dodaj racun
+	url(r'^dodajRacun', views.dodajRacun, name='dodajRacun'),
+	
+	# odstrani racun
+	url(r'^odstraniRacun', views.odstraniRacun, name='odstraniRacun'),
+	
+    # administracija
+    url(r'^administracija', views.administracija, name='administracija'),
+	url(r'^AdministracijaPodrobno', views.AdministracijaPodrobno, name='AdministracijaPodrobno')
+	
 ]
 
